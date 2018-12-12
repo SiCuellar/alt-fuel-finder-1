@@ -1,0 +1,10 @@
+  <h1> Stations </h1>
+  <% @stations.each do |station| %>
+  <%= station.name %>
+  <%= station.address %>
+  <%= station.fuel %>
+  <%= station.distance %>
+  <%= station.atime %>
+  <br>
+  <br>
+  <% end  %>
