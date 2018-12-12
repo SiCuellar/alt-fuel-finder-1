@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    @stations = StationSearchResult.new(params[:station])
+    @stations = StationSearch.new(params[:stations])
   end
 end
