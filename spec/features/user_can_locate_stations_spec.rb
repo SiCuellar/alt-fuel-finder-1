@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature "User can visit root page" do
-  scenario "and fill in search form " do
+describe "User can visit root page" do
+  it "and fill in search form " do
     visit "/"
     # When I visit "/"
 
@@ -10,7 +10,12 @@ feature "User can visit root page" do
 
     expect(current_path).to eq(search_path)
 
-    expect(page)
+    expect(page).to have_content(station_1.name)
+    expect(page).to have_content(station_1.address)
+    expect(page).to have_content(station_1.fuel)
+    expect(page).to have_content(station_1.distance)
+    expect(page).to have_content(station_1.atime)
+
 
     # Then I should see a list of the 10 closest stations within 6 miles sorted by distance
     # And the stations should be limited to Electric and Propane
