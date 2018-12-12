@@ -3,7 +3,9 @@ class StationSearch < ApplicationRecord
     @zip = zip
   end
 
-  def 
+  def staions
+    binding.pry
+  end
 
 
 end
