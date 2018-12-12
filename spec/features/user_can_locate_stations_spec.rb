@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe "User can visit root page" do
   it "and fill in search form " do
+    station_1 = create(:station)
     visit "/"
-    # When I visit "/"
 
     fill_in :q, with: 80203
     click_button("Locate")
